@@ -17,4 +17,6 @@ done
 echo "service is up and running "
 echo "now executing $cmd "
 
+#exit with zero (success) - http://tldp.org/LDP/abs/html/exitcodes.html 
+exit 0
 #exec  $cmd
