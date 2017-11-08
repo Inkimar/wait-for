@@ -8,7 +8,7 @@ cmd="$@"
 
 echo "start"
 XSTATUS=502
-while [ $XSTATUS -eq 502 ] || [ $XSTATUS -eq 404 ] ; do
+while [ $XSTATUS -eq 502 ] || [ $XSTATUS -eq 404 ] || [ $XSTATUS -eq 000 ]; do
     sleep 1
     XSTATUS=`curl -s   --connect-timeout $TIMEOUT -o /dev/null -w "%{http_code}" https://alpha-sso.dina-web.net/auth/realms/master/`
     echo "current HTTP STATUS is $XSTATUS"
